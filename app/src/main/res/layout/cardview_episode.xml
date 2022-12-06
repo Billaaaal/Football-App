@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="206dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/episodeThumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/after"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedCorners_episode" />
+
+        <TextView
+            android:id="@+id/podcastTitle_"
+            android:layout_width="wrap_content"
+            android:maxWidth="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/roboto"
+            android:textFontWeight="100"
+            android:text="Mourir Moins Con"
+            android:textColor="#292d30"
+            android:textSize="13dp"
+            app:layout_constraintStart_toEndOf="@+id/episodeThumbnail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/episodeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="24 oct. 2021"
+            android:textColor="#42474b"
+            android:textSize="10.9dp"
+            app:layout_constraintStart_toEndOf="@+id/episodeThumbnail"
+            app:layout_constraintTop_toBottomOf="@+id/podcastTitle_" />
+
+        <TextView
+            android:id="@+id/episodeTitle"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="2"
+            android:text="Pourquoi le PSG et l’OM se détestent-ils ? Ou l'histoire du Clasico"
+            android:textAlignment="viewStart"
+            android:textColor="#292d30"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/episodeDate" />
+
+        <TextView
+            android:id="@+id/episodeDescription"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_light"
+            android:maxLines="2"
+            android:text="PSG-OM / OM-PSG. C’est au moins deux fois par an. Ce match de football entre les deux clubs les plus populaires de France déchaînent les passions, scindent les amitiés. C’est le sujet de toute l’attention des fans de foot. Alors ok très bien, ils ne s’aiment pas, ils sont rivaux… mais pourquoi ? Installez-vous confortablement"
+            android:textColor="#292d30"
+            android:textFontWeight="600"
+            android:textSize="13.2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/episodeTitle" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/play_buttonEpisode"
+            android:layout_width="wrap_content"
+            android:minWidth="80dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/border_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_svgviewer_output"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:drawablePadding="8dp"
+            android:text="1 h 18 min"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

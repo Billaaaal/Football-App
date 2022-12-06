@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    tools:context=".MiniPlayer">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eff4fa">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/episodeThumbnail"
+            android:layout_width="52.5dp"
+            android:layout_height="52.5dp"
+            android:src="@drawable/after"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:shapeAppearanceOverlay="@style/roundedCorners_episode" />
+
+        <TextView
+            android:id="@+id/episodeTitle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto"
+            android:textFontWeight="500"
+            android:maxLines="1"
+            android:text="Pourquoi le PSG et l’OM se détestent-ils ? Ou l'histoire du Clasico"
+            android:textAlignment="viewStart"
+            android:textColor="#292d30"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/episodeThumbnail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/play_button_small"
+            android:layout_width="11.25dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/ic_play_button_episode_time_vggg"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

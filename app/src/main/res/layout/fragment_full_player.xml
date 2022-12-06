@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="650dp"
+    tools:context=".FullPlayer">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_button2">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/episodeThumbnail"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:src="@drawable/after"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.12"
+            app:shapeAppearanceOverlay="@style/roundedCorners_episode2" />
+
+        <TextView
+            android:id="@+id/episodeTitle"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_light"
+            android:maxLines="1"
+            android:textFontWeight="600"
+            android:text="Pourquoi le PSG et l’OM se détestent-ils ? Ou l'histoire du Clasico"
+            android:textAlignment="viewStart"
+            android:textColor="#292d30"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.633"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/episodeThumbnail" />
+
+
+        <TextView
+            android:id="@+id/podcastTitle_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto"
+            android:maxWidth="310dp"
+            android:text="Mourir Moins Con"
+            android:textColor="#4F5357"
+            android:textFontWeight="100"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/episodeTitle" />
+
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="330dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="32dp"
+            android:progressTint="#00678a"
+            android:thumbTint="#00678a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/podcastTitle_" />
+
+        <TextView
+            android:id="@+id/timer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto"
+            android:maxWidth="310dp"
+            android:text="0:00"
+            android:textColor="#4F5357"
+            android:textFontWeight="100"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.103"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <TextView
+            android:id="@+id/timer_total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="44dp"
+            android:fontFamily="@font/roboto"
+            android:maxWidth="310dp"
+            android:text="0:00"
+            android:textColor="#4F5357"
+            android:textFontWeight="100"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/timer_text"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/play_button"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/ic_play"
+            android:clickable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>
